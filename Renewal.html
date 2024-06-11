@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>License Renewal</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .container { width: 80%; margin: auto; }
+  header { background: #4CAF50; color: white; padding: 10px 0; text-align: center; }
+  form { margin-top: 20px; }
+  input, button { margin: 10px 0; }
+  .upload-btn-wrapper { position: relative; overflow: hidden; display: inline-block; }
+  button.upload { border: 2px solid #4CAF50; color: green; background-color: white; padding: 8px 20px; border-radius: 8px; font-size: 20px; font-weight: bold; }
+  input[type=file] { font-size: 100px; position: absolute; left: 0; top: 0; opacity: 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>License Renewal Portal</h1>
+</header>
+<div class="container">
+  <form id="renewal-form">
+    <label for="document-upload">Upload Documents:</label>
+    <div class="upload-btn-wrapper">
+      <button class="upload">Upload a file</button>
+      <input type="file" name="myfile" />
+    </div>
+    <label for="appointment-date">Book Appointment:</label>
+    <input type="date" id="appointment-date" name="appointment-date">
+    <label for="payment">Process Payment:</label>
+    <!-- Placeholder for payment processing -->
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<script>
+  document.getElementById('renewal-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Add any form validation or processing logic here
+
+    // Redirect to the confirmation.html page
+    window.location.href = 'confirmation.html';
+  });
+</script>
+</body>
+</html>
